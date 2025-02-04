@@ -1,5 +1,5 @@
 import streamlit as st
-import openai 
+from openai import OpenAI openai 
 
 # Set up the page
 st.set_page_config(page_title="AI Chat Interface", layout="centered")
@@ -15,7 +15,7 @@ api_key = "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
 
 # Function to fetch AI-generated response
 def get_ai_response(prompt, api_key):
-    client = openai(
+    client = OpenAI(
         base_url="https://integrate.api.nvidia.com/v1",
         api_key=api_key
     )
